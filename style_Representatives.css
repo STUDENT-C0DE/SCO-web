@@ -1,0 +1,133 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+ }
+    
+ul
+{
+    list-style-type: none;
+}
+
+
+body
+{
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+nav
+{
+    position: sticky; top: 0;
+    backdrop-filter: blur(45px);
+    background-color: #7397cd; 
+    font-family: calibri; 
+}
+   
+nav ul
+{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li
+{
+    height: 50px; 
+    list-style: none; 
+    display: inline-block; 
+}
+nav a{
+    height: 100%;
+    color: black;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+nav li:nth-child(2)
+{
+    margin-right: auto;
+    margin-left: none;
+}
+
+.no-interaction 
+{
+    pointer-events: none;
+}
+
+nav a:hover
+{
+    background-color: #9dcef1;
+}
+
+.header
+{
+    color: black;
+    text-align: center;
+    margin-top: auto; 
+}
+
+.mini_logo
+{
+    width: 55px;
+    height: 55px;
+    gap: 3px;
+}
+
+.role
+{
+    font-size: medium;
+    text-align: center;
+}
+
+.reps
+{
+    display: inline-block;
+    width: 250px;
+}
+
+.reps .name
+{
+    text-align: center;
+}
+
+.reps img
+{
+    width: 100%;
+    height: auto;
+}
+
+.Single
+{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #9dcef1;
+    border-radius: 20px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+}
+
+.People
+{
+    gap: 40px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #9dcef1;
+    border-radius: 20px;
+    width: 1400px;
+    height: 740px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
