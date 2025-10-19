@@ -12,17 +12,16 @@
       crossorigin="anonymous" 
       referrerpolicy="no-referrer" 
     />
-
   </head>
   <body>
     <nav>
         <ul>
             <li class="no-interaction"><div><a href="#"><img src="images/BTTHS_logo.png" class="mini_logo"></a></div></li>
             <li class="no-interaction"><a href="#">Student Council Organization</a></li> 
-            <li><a href="Homepage.html">Homepage</a></li>
-            <li><a href="Representatives.html">Representatives</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
-            <li><a href="Feedback.html">Feedback</a></li>
+            <li><a href="Homepage.html"><i class="fa-solid fa-house" ></i><span class="Nav-text">Homepage</span></a></li>
+            <li><a href="Representatives.html"><i class="fa-solid fa-people-group" ></i><span class="Nav-text">Representatives</span></a></li>
+            <li><a href="FAQ.html"><i class="fa-solid fa-clipboard-question" ></i><span class="Nav-text">FAQ</span></a></li>
+            <li><a href="Feedback.html"><i class="fa-solid fa-comment-dots" ></i><span class="Nav-text">Feedback</span></a></li>
         </ul>
 
     </nav>
@@ -30,19 +29,31 @@
     <h1 class="header">The SCO needs your help</h1>
     <h3 class="words">The SCO handles events and announcements for the Tay Tungians and we need your suggestions and opinions on how we run things. With your ideas, we can help host more inclusive and entertaining events and/or announcements that will benefit everyone and bring us closer to great harmony.</h3>
     <div class="contact-container">
-      <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
-        <input type="hidden" name="access_key" value="5b7cae46-0244-4825-93fa-a15854c805a4">
-        <input type="text" name="Grade" placeholder="Your Grade" class="contact-inputs" required>
-        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-        <textarea name="message" placeholder="Your Feedback" class="contact-inputs" required></textarea>
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+      <form id="feedbackForm" method="POST" action="https://script.google.com/macros/s/AKfycbz-kJ4o6kV4XmcrLr7U0lSzCORm2HvbgrTCMaL0pW2F9kr8wm5gcxhGs_mckon7RoI6/exec" class="contact-left" target="hidden_iframe">
+        <input type="text" name="grade" placeholder="Your Grade (optional)" class="contact-inputs">
+        <input type="text" name="name" placeholder="Your Name (optional)" class="contact-inputs">
+        <textarea name="feedback" placeholder="Your Feedback" class="contact-inputs" required></textarea>
         <button type="submit">
           Submit 
           <i class="fa fa-paper-plane" ></i>
         </button>
       </form>
     </div>
+    <script>
+      let formSubmitted = false;
+
+      document.getElementById('feedbackForm').addEventListener('submit', function() {
+          formSubmitted = true;
+      });
+      document.querySelector('iframe[name="hidden_iframe"]').addEventListener('load', function() {
+          if (formSubmitted) {
+              alert("Thank you for your feedback!");
+              document.getElementById('feedbackForm').reset();
+              formSubmitted = false;
+          }
+      });
+    </script>
   </body>
 </html>
 
-
-    
