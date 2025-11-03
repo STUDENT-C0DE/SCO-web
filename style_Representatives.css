@@ -13,7 +13,7 @@ ul
 body
 {
     font-size: 22px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Aleo';
 }
 
 nav
@@ -41,7 +41,9 @@ nav li
     list-style: none; 
     display: inline-block; 
 }
-nav a{
+
+nav a
+{
     height: 100%;
     color: black;
     padding: 0 30px;
@@ -102,6 +104,7 @@ nav ul li a i
     color: black;
     text-align: center;
     margin-top: auto; 
+    font-family: 'Aleo';
 }
 
 .mini_logo
@@ -114,6 +117,7 @@ nav ul li a i
 .role
 {
     font-size: medium;
+    font-family: 'Lato';
     text-align: center;
 }
 
@@ -126,13 +130,46 @@ nav ul li a i
 .reps .name
 {
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Merriweather';
 }
 
-.reps img
+.rep-img-container
+{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.rep-img-container img
 {
     width: 100%;
     height: auto;
+    border-radius: 10px;
+    transition: filter 0.3s ease
+}
+
+.rep-img-container:hover img
+{
+    filter: brightness(40%);
+}
+
+.overlay-text
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    opacity: 0;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.rep-img-container:hover .overlay-text
+{
+    opacity: 1;
 }
 
 .Single
@@ -168,13 +205,18 @@ nav ul li a i
 {
 	background: linear-gradient(to bottom, white, #fb5406);
 	width: 100%;
-	height: 75vh;
+	height: 320px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: start;
 	text-align: center;
 	padding-top: 70px;
+}
+
+.Footer p
+{
+    font-weight: bold;
 }
 
 .Footer h1 
@@ -184,40 +226,73 @@ nav ul li a i
 	text-align: center;
 }
 
-.Footer-text 
+.Core-Values
 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 250px;
+	gap: 150px;
 	padding: 0;
 	margin: 0;
+    flex-wrap: wrap;
 }
 
-.Footer-text i
-{
-    font-size: 70px;
-    margin-top: 20px;
-    color: black;
-}
-
-.Footer ul li 
+.Core-Values ul li 
 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.Footer ul li h1 
+.Core-Values li h1 
 {
-	font-size: 80px;
+	font-size: 30px;
 	margin: 0;
 	line-height: 1;
 }
 
-.Footer ul li span 
+.Core-Values li span 
 {
-	font-size: 16px;
-    font-weight: 500;
+	font-size: 10px;
+    font-weight: bold;
 	margin-top: 20px;
+}
+
+.Grad-attributes
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 60px;
+	padding: 0;
+	margin: 0;
+    flex-wrap: wrap;
+}
+
+.Grad-attributes li
+{
+    font-size: 20px;
+}
+
+.Grad-attributes li span
+{
+	font-size: 10px;
+    font-weight: bold;
+	margin-top: 20px;
+}
+
+.Socials
+{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	padding: 0;
+	margin: 0;
+    font-size: 130%;
+}
+
+.Socials i
+{
+    color: black;
 }
