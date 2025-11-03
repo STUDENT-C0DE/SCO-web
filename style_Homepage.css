@@ -13,7 +13,9 @@ ul
 body
 {
     font-size: 22px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Aleo';
+    align-items: center;
+    min-height: 100vh;
 }
 
 nav
@@ -137,6 +139,7 @@ nav ul li a i
     color: black;
     text-align: center;
     margin-top: auto; 
+    font-family: 'Aleo';
 }
 
 .info_text
@@ -155,7 +158,7 @@ nav ul li a i
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: larger;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Lato';
 }
 
 .info_text h1
@@ -166,20 +169,60 @@ nav ul li a i
 .info_text h3
 {
     font-size: larger;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Merriweather';
+}
+
+.MisViPhi
+{
+    display: flex;
+    width: 200%;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    margin: 50px auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.card
+{
+    background: rgba(157, 206, 241, 0.4);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-sizing: border-box;
+    text-align: center;
+    flex: 1 1 300px;
+    backdrop-filter: blur(45px);
+}
+
+.card p
+{
+    margin-top: 15px;
+    font-family: 'Lato';
+}
+
+.card H2
+{
+    font-family: "Aleo";
 }
 
 .Footer 
 {
 	background: linear-gradient(to bottom, white, #fb5406);
 	width: 100%;
-	height: 75vh;
+	height: 320px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: start;
 	text-align: center;
 	padding-top: 70px;
+}
+
+.Footer p
+{
+    font-weight: bold;
 }
 
 .Footer h1 
@@ -189,40 +232,85 @@ nav ul li a i
 	text-align: center;
 }
 
-.Footer-text 
+.Core-Values
 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 250px;
+	gap: 150px;
 	padding: 0;
 	margin: 0;
+    flex-wrap: wrap;
 }
 
-.Footer-text i
-{
-    font-size: 70px;
-    margin-top: 20px;
-    color: black;
-}
-
-.Footer ul li 
+.Core-Values ul li 
 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.Footer ul li h1 
+.Core-Values li h1 
 {
-	font-size: 80px;
+	font-size: 40px;
 	margin: 0;
 	line-height: 1;
 }
 
-.Footer ul li span 
+.Core-Values li span 
 {
-	font-size: 16px;
-    font-weight: 500;
+	font-size: 10px;
+    font-weight: bold;
 	margin-top: 20px;
+}
+
+.Grad-attributes
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 60px;
+	padding: 0;
+	margin: 0;
+    flex-wrap: wrap;
+}
+
+.Grad-attributes li
+{
+    font-size: 20px;
+}
+
+.Grad-attributes li span
+{
+	font-size: 10px;
+    font-weight: bold;
+	margin-top: 20px;
+}
+
+.Socials
+{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	padding: 0;
+	margin: 0;
+    font-size: 130%;
+}
+
+.Socials i
+{
+    color: black;
+}
+
+@media (max-width: 900px)
+{
+    .MisViPhi
+    {
+        flex-wrap: wrap;
+    }
+    .card
+    {
+        width: 100%;
+    }
 }
