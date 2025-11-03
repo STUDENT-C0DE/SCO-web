@@ -14,7 +14,7 @@ body
 {
     background-color: #8cb7d6;
     font-size: 22px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Aleo';
 }
 
 nav
@@ -114,14 +114,17 @@ nav ul li a i
     text-align: center;
     padding-top: 25px;
     letter-spacing: 2px;
+    font-family: 'Aleo';
 }
 
 .words
 {
     max-width: 85%;
-    font-size: 35px;
+    font-size: 30px;
     margin: auto;
+    margin-bottom: 20px;
     text-align: center;
+    font-family: 'Lato';
 }
 
 .contact-container
@@ -182,6 +185,7 @@ nav ul li a i
     border-radius: 50px;
     background: linear-gradient(270deg, #ff8c56, #fb5406);
     cursor: pointer;
+    font-family: 'Aleo';
 }
 
 .contact-left button img
@@ -201,13 +205,18 @@ nav ul li a i
 {
 	background: linear-gradient(to bottom, #8cb7d6, #fb5406);
 	width: 100%;
-	height: 75vh;
+	height: 320px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: start;
 	text-align: center;
 	padding-top: 70px;
+}
+
+.Footer p
+{
+    font-weight: bold;
 }
 
 .Footer h1 
@@ -217,40 +226,73 @@ nav ul li a i
 	text-align: center;
 }
 
-.Footer-text 
+.Core-Values
 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 250px;
+	gap: 150px;
 	padding: 0;
 	margin: 0;
+    flex-wrap: wrap;
 }
 
-.Footer-text i
-{
-    font-size: 70px;
-    margin-top: 20px;
-    color: black;
-}
-
-.Footer ul li 
+.Core-Values ul li 
 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.Footer ul li h1 
+.Core-Values li h1 
 {
-	font-size: 80px;
+	font-size: 30px;
 	margin: 0;
 	line-height: 1;
 }
 
-.Footer ul li span 
+.Core-Values li span 
 {
-	font-size: 16px;
-    font-weight: 500;
+	font-size: 10px;
+    font-weight: bold;
 	margin-top: 20px;
+}
+
+.Grad-attributes
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 60px;
+	padding: 0;
+	margin: 0;
+    flex-wrap: wrap;
+}
+
+.Grad-attributes li
+{
+    font-size: 20px;
+}
+
+.Grad-attributes li span
+{
+	font-size: 10px;
+    font-weight: bold;
+	margin-top: 20px;
+}
+
+.Socials
+{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	padding: 0;
+	margin: 0;
+    font-size: 130%;
+}
+
+.Socials i
+{
+    color: black;
 }
