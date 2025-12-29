@@ -1,0 +1,314 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+ }
+    
+ul
+{
+    list-style-type: none;
+}
+
+
+body
+{
+    font-size: 22px;
+    font-family: 'Aleo';
+}
+
+nav
+{
+    position: sticky; top: 0;
+    backdrop-filter: blur(45px);
+    background-color: #7397cd; 
+    font-family: calibri; 
+    z-index: 500;
+}
+   
+nav ul
+{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+}
+
+nav li
+{
+    height: 60px; 
+    list-style: none; 
+    display: inline-block; 
+}
+
+nav a
+{
+    height: 100%;
+    color: black;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+nav li:nth-child(2)
+{
+    margin-right: auto;
+    margin-left: none;
+}
+
+nav li.no-interaction a 
+{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 25px;
+    padding: 0 20px;
+    pointer-events: none;
+}
+
+nav a:hover
+{
+    background-color: #9dcef1;
+}
+
+nav ul li a 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+nav ul li a i 
+{
+    display: block;
+    font-size: 24px;
+    margin: 0;
+}
+
+.nav-text 
+{
+    display: block;
+    margin-top: 5px;
+    line-height: 1.2;
+}
+
+.header
+{
+    color: black;
+    text-align: center;
+    margin-top: auto; 
+    font-family: 'Aleo';
+}
+
+.mini_logo
+{
+    width: 55px;
+    height: 55px;
+    gap: 3px;
+}
+
+
+.People .reps
+{
+    display: inline-block;
+    width: 180px;
+}
+
+.People .reps h2
+{
+    font-size: 75%;
+    font-family: 'Lato';
+    text-align: center;
+}
+
+.People .reps p
+{
+    margin-top: 10px;
+    font-size: Medium;
+    text-align: center;
+    font-family: 'Merriweather';
+}
+
+.Single .reps
+{
+    display: inline-block;
+    width: 250px;
+}
+
+.Single .reps p
+{
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Merriweather';
+}
+
+.rep-img-container
+{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.rep-img-container img
+{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: filter 0.3s ease
+}
+
+.rep-img-container:hover img
+{
+    filter: brightness(40%);
+}
+
+.overlay-text
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    opacity: 0;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.rep-img-container:hover .overlay-text
+{
+    opacity: 1;
+}
+
+.Single
+{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #9dcef1;
+    border-radius: 20px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.People
+{
+    gap: 35px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #9dcef1;
+    border-radius: 20px;
+    width: 1200px;
+    height: 570px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Footer 
+{
+	background: linear-gradient(to bottom, white, #fb5406);
+	width: 100%;
+	height: 320px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: start;
+	text-align: center;
+	padding-top: 70px;
+}
+
+.Footer p
+{
+    font-weight: bold;
+}
+
+.Footer h1 
+{
+	font-size: 36px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.Core-Values
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 150px;
+	padding: 0;
+	margin: 0;
+    flex-wrap: wrap;
+}
+
+.Core-Values ul li 
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Core-Values li h1 
+{
+	font-size: 30px;
+	margin: 0;
+	line-height: 1;
+}
+
+.Core-Values li span 
+{
+	font-size: 10px;
+    font-weight: bold;
+	margin-top: 20px;
+}
+
+.Grad-attributes
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 60px;
+	padding: 0;
+	margin: 0;
+    flex-wrap: wrap;
+}
+
+.Grad-attributes li
+{
+    font-size: 20px;
+}
+
+.Grad-attributes li span
+{
+	font-size: 10px;
+    font-weight: bold;
+	margin-top: 20px;
+}
+
+.Socials
+{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	padding: 0;
+	margin: 0;
+    font-size: 130%;
+}
+
+.Socials i
+{
+    color: black;
+}
