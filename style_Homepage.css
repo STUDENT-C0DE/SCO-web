@@ -150,21 +150,13 @@ nav i
     position: relative;
 }
 
-.header
-{
-    color: black;
-    text-align: center;
-    margin-top: auto; 
-    font-family: 'Aleo';
-}
-
 .info_text
 {
-    position: center;
+    position: relative;
     display: grid;
     text-align: center;
     justify-items: center;
-    width: 180vh;
+    width: 120vh;
     margin: 0 auto;
     margin-top: 25px;
 }
@@ -173,17 +165,20 @@ nav i
 {
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: larger;
+    font-size: 18px;
     font-family: 'Lato';
 }
 
 .info_text h1
 {
     margin-bottom: 20px;
+    font-size: 40px;
 }
 
-
-    font-family: "Aleo";
+.info_text h2
+{
+    font-size: 28px;
+    font-family: 'Merriweather';
 }
 
  
