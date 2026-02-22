@@ -84,7 +84,7 @@ nav a:hover
 
 nav ul li:first-child a:hover 
 {
-    background-color: none;
+    background-color: transparent;
 }
 
 nav ul li a 
