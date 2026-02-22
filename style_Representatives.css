@@ -14,6 +14,7 @@ body
 {
     font-size: 22px;
     font-family: 'Aleo';
+    background-color: rgb(232, 232, 232);
 }
 
 nav
@@ -23,9 +24,9 @@ nav
     background-color: #344786; 
     font-family: calibri; 
     z-index: 500;
-
+    
 }
-
+   
 nav ul
 {
     width: 100%;
@@ -50,6 +51,8 @@ nav a{
     align-items: center;
 
 }
+
+
 
 nav a span{
     color: rgb(199, 199, 199);
@@ -79,7 +82,7 @@ nav a:hover
 
 nav ul li:first-child a:hover 
 {
-    background-color: none;
+    background-color: transparent;
 }
 
 nav ul li a 
@@ -227,4 +230,3 @@ nav i
     align-items: center;
     flex-wrap: wrap;
 }
-
