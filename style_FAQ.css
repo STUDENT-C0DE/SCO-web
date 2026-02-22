@@ -24,9 +24,9 @@ nav
     background-color: #344786; 
     font-family: calibri; 
     z-index: 500;
-
+    
 }
-
+   
 nav ul
 {
     width: 100%;
@@ -82,7 +82,7 @@ nav a:hover
 
 nav ul li:first-child a:hover 
 {
-    background-color: none;
+    background-color: transparent;
 }
 
 nav ul li a 
@@ -112,6 +112,7 @@ nav i
     line-height: 1.2;
     color: rgb(199, 199, 199);
 }
+
 .Title
 {
     background-color: white;
@@ -161,7 +162,7 @@ nav i
     font-family: 'Merriweather';
 }
 
-accordion i
+.accordion i
 {
     font-size: 1.6rem;
 }
@@ -199,4 +200,3 @@ accordion i
 {
     border: none;
 }
-
