@@ -16,8 +16,8 @@ body
     font-family: 'Aleo';
     align-items: center;
     min-height: 100vh;
+    background-color: rgb(232, 232, 232);
 }
-
 
 nav
 {
@@ -26,9 +26,9 @@ nav
     background-color: #344786; 
     font-family: calibri; 
     z-index: 500;
-
+    
 }
-
+   
 nav ul
 {
     width: 100%;
@@ -84,7 +84,7 @@ nav a:hover
 
 nav ul li:first-child a:hover 
 {
-    background-color: none;
+    background-color: transparent;
 }
 
 nav ul li a 
@@ -150,13 +150,21 @@ nav i
     position: relative;
 }
 
+.header
+{
+    color: black;
+    text-align: center;
+    margin-top: auto; 
+    font-family: 'Aleo';
+}
+
 .info_text
 {
-    position: relative;
+    position: center;
     display: grid;
     text-align: center;
     justify-items: center;
-    width: 120vh;
+    width: 180vh;
     margin: 0 auto;
     margin-top: 25px;
 }
@@ -165,28 +173,66 @@ nav i
 {
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: larger;
     font-family: 'Lato';
 }
 
 .info_text h1
 {
     margin-bottom: 20px;
-    font-size: 40px;
 }
 
-.info_text h2
+.info_text h3
 {
-    font-size: 28px;
+    font-size: larger;
     font-family: 'Merriweather';
 }
 
-.learn more
+.MisViPhi
 {
+    display: flex;
+    width: 200%;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    margin: 50px auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.card
+{
+    background: rgba(157, 206, 241, 0.4);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-sizing: border-box;
+    text-align: center;
+    flex: 1 1 300px;
+    backdrop-filter: blur(45px);
+}
+
+.card p
+{
+    margin-top: 15px;
+    font-family: 'Lato';
+}
+
+.card H2
+{
+    font-family: "Aleo";
+}
+
+.learn_more 
+{
+    background-color: #7397cd;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
     border-radius: 15px;
-    font-size: 20px;
-    color: rgba(157, 206, 241, 0.4);
-    cursor:pointer;
-} 
- 
-  
+    cursor: pointer;
+}
