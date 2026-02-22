@@ -33,29 +33,82 @@
     <p class="words">The SCO handles events and announcements for the Tay Tungians and we need your suggestions and opinions on how we run things. With your ideas, we can help host more inclusive and entertaining events and/or announcements that will benefit everyone and bring us closer to great harmony.</p>
     <div class="contact-container">
       <iframe name="hidden_iframe" style="display:none;"></iframe>
-      <form id="feedbackForm" method="POST" action="https://script.google.com/macros/s/AKfycbz-kJ4o6kV4XmcrLr7U0lSzCORm2HvbgrTCMaL0pW2F9kr8wm5gcxhGs_mckon7RoI6/exec" class="contact-left" target="hidden_iframe">
+
+      <form id="feedbackForm"
+            method="POST"
+            action="https://script.google.com/macros/s/AKfycbxOezSCEkMijAtZWDULgZ0o_UTi40ptBbmnoFqzgrGu87Otv2v08TUc73Wjw4DXIYPP/exec"
+            target="hidden_iframe"
+            class="contact-left">
+
         <input type="text" name="grade" placeholder="Your Grade (optional)" class="contact-inputs">
         <input type="text" name="name" placeholder="Your Name (optional)" class="contact-inputs">
-        <textarea name="feedback" placeholder="Your Feedback" class="contact-inputs" required></textarea>
+        <input type="email" name="userEmail" placeholder="Your School Email"
+              class="contact-inputs" required pattern=".*@btths\.edu\.ph">
+        <textarea name="feedback" placeholder="Your Feedback"
+                  class="contact-inputs" required></textarea>
+
         <button type="submit">
-          Submit 
-          <i class="fa fa-paper-plane" ></i>
+          Submit <i class="fa fa-paper-plane"></i>
         </button>
       </form>
-    </div>
-    <script>
-      let formSubmitted = false;
 
-      document.getElementById('feedbackForm').addEventListener('submit', function() {
-          formSubmitted = true;
+      <div id="trackingIDContainer"></div>
+    </div>
+
+    <div class="checking">
+      <div>
+        <h2>Check Feedback Status</h2>
+        <input type="text" id="checkID" placeholder="Enter your Tracking ID">
+        <button id="checkStatusBtn">Check Status</button>
+        <p id="statusResult"></p>
+      </div>
+    </div>
+    <br>
+    <script>
+    let formSubmitted = false;
+    const form = document.getElementById('feedbackForm');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData
+      })
+      .then(res => res.text())
+      .then(trackingID => {
+        document.getElementById('trackingIDContainer').textContent =
+          "Submission successful! Tracking ID: " + trackingID;
+        form.reset();
+      })
+      .catch(err => {
+        document.getElementById('trackingIDContainer').textContent =
+          "Submission failed.";
+        console.error(err);
       });
-      document.querySelector('iframe[name="hidden_iframe"]').addEventListener('load', function() {
-          if (formSubmitted) {
-              alert("Thank you for your feedback!");
-              document.getElementById('feedbackForm').reset();
-              formSubmitted = false;
-          }
-      });
+    });
+
+    // STATUS CHECKER
+    document.getElementById('checkStatusBtn').addEventListener('click', function() {
+      const trackingID = document.getElementById('checkID').value.trim();
+      if (!trackingID) {
+        alert("Enter your Tracking ID.");
+        return;
+      }
+
+      fetch("https://script.google.com/macros/s/AKfycbxOezSCEkMijAtZWDULgZ0o_UTi40ptBbmnoFqzgrGu87Otv2v08TUc73Wjw4DXIYPP/exec?id=" + encodeURIComponent(trackingID))
+        .then(res => res.text())
+        .then(status => {
+          document.getElementById('statusResult').textContent =
+            "Status: " + status;
+        })
+        .catch(() => {
+          document.getElementById('statusResult').textContent =
+            "Unable to check status.";
+        });
+    });
     </script>
   </body>
 </html>
